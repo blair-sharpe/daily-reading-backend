@@ -1,0 +1,214 @@
+{
+  "name": "daily-reading",
+  "version": "1",
+  "items": [
+    {
+      "type": "folder",
+      "name": "authorization",
+      "filename": "authorization",
+      "root": {
+        "meta": {
+          "name": "authorization"
+        }
+      },
+      "items": [
+        {
+          "type": "http",
+          "name": "sign in",
+          "filename": "sign in.bru",
+          "seq": 1,
+          "request": {
+            "url": "http://localhost:3000/v1/auth/login",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n  \"email\": \"jamessmith@gmail.com\",\n  \"password\": \"blairboy\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "logout",
+          "filename": "logout.bru",
+          "seq": 2,
+          "request": {
+            "url": "http://localhost:3000/v1/auth/logout",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "create",
+          "filename": "create.bru",
+          "seq": 3,
+          "request": {
+            "url": "http://localhost:3000/v1/auth/create",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n  \"name\": \"Blair Sharpe\",\n  \"email\": \"blair.a.sharpe@gmail.coms\",\n  \"password\": \"Shadyridge11$%\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "notes",
+      "filename": "notes",
+      "root": {
+        "meta": {
+          "name": "notes"
+        }
+      },
+      "items": [
+        {
+          "type": "http",
+          "name": "notes",
+          "filename": "notes.bru",
+          "seq": 1,
+          "request": {
+            "url": "http://localhost:3000/v1/notes/1",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n  \"note\": \"a\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "note",
+          "filename": "note.bru",
+          "seq": 2,
+          "request": {
+            "url": "http://localhost:3000/v1/notes/1",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "reading",
+      "filename": "reading",
+      "root": {
+        "meta": {
+          "name": "reading"
+        }
+      },
+      "items": [
+        {
+          "type": "http",
+          "name": "reading",
+          "filename": "reading.bru",
+          "seq": 1,
+          "request": {
+            "url": "http://localhost:3000/v1/reading/1",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "environments": [],
+  "brunoConfig": {
+    "version": "1",
+    "name": "daily-reading",
+    "type": "collection",
+    "ignore": [
+      "node_modules",
+      ".git"
+    ],
+    "size": 0,
+    "filesCount": 0
+  }
+}
